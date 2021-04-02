@@ -1,9 +1,13 @@
-# Express_Middleware
-Understanding Express Middleware - Web Development Concepts Explained
+#middlewares
 
-I have added all the code from the video into this repo and add a few comments and extra snippets of code 
+1- type is app level
+  app.use((req,res,next) => {console.log} next();)
+  app.use ((err,req,res,next) => {console.log} next();)
 
-How To Run Code:
-clone or download this repo files
-run npm install in the folder location 
-then run npm start and you are all set...
+2- route level
+  const md1=(req,res,next) => {..........} next();
+  then we use md1 in middle of route within app.get.........
+
+3- built in middlewares
+  app.use(express.json()) like body-parser it gives us to access req.body
+  
